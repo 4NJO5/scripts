@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <script> 
+           function retornaSexo(sexo){ // exemplo de funcao
+                //M, F
+                //Masculino, Feminino
+
+                // 1 . Utilizando if, else if e else
+
+             /*   if (sexo === 'M'){
+                    return 'Masculino'
+                } else if (sexo === 'F'){
+                    return 'Feminino';
+                } else {
+                    return 'Outro';
+                }
+            */
+                // 2 . Utilizando switch
+                switch (sexo){
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+             
+           }
+
+           var resultado = retornaSexo('M');
+           console.log(resultado);
+
+        </script>
+    </body>
+</html>
