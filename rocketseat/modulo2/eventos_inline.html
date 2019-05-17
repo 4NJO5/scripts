@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manipulando a DOM</title>
+    </head>
+    <body>
+        <h1>"Eventos Inline"</h1>
+
+        <div id="app">
+            <button onclick="mostraAlerta()">Me Pressione</button>
+        </div>
+
+        <div id="app1">
+            <button onmouseover="mostraAlertaMouseOver()">Passe o Mouse</button>
+        </div>
+
+        <div>
+            <input onkeypress="mostraAlertaOnKeyPress()" />
+        </div>
+
+        <script>
+            function mostraAlerta(){
+                alert('Botão foi Clicado');
+            }
+            function mostraAlertaMouseOver(){
+                alert('Você acabou de passar o Mouse neste botão');
+            }
+            function mostraAlertaOnKeyPress(){
+                alert('Agora você está Tentando Digitar');
+            }
+        </script>
+
+    </body>
+</html>
