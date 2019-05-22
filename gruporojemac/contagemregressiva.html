@@ -1,47 +1,123 @@
-<script language="Javascript">
-        var YY = 2008;
-        var MM = 12;
-        var DD = 31;
-        var HH = 23;
-        var MI = 59;
-        var SS = 59; 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Suporte Rojemac</title>
+    </head>
+            <script type="text/javascript">
+                    var YY = 2019;
+                    var MM = 05;
+                    var DD = 21;
+                    var HH = 20;
+                    var MI = 00;
+                    var SS = 00; 
+                    
+                    function atualizaContador() 
+                    {  
+                    var hoje = new Date();  
+                    var futuro = new Date(YY,MM-1,DD,HH,MI,SS);   
+                    var ss = parseInt((futuro - hoje) / 1000);  
+                    var mm = parseInt(ss / 60);  
+                    var hh = parseInt(mm / 60);  
+                    var dd = parseInt(hh / 24);   
+                    ss = ss - (mm * 60);  
+                    mm = mm - (hh * 60);  
+                    hh = hh - (dd * 24);   
+                    var faltam = '';  
+                    faltam += (dd && dd > 1) ? dd+' dias, ' : (dd==1 ? '1 dia, ' : '');  
+                    faltam += (toString(hh).length) ? hh+' hr, ' : '';  
+                    faltam += (toString(mm).length) ? mm+' min e ' : '';  
+                    faltam += ss+' seg';   
+                    
+                    if (dd+hh+mm+ss > 0) 
+                    {
+                    document.getElementById('contador').innerHTML = faltam;	
+                    setTimeout(atualizaContador,1000);  
+                    }
+                    else
+                    {
+                    document.getElementById('contador').innerHTML = 'Os Servidores serem Reiniciados!!!!';	
+                    setTimeout(atualizaContador,1000);  
+                    }
+                    }
+            </script>
         
-        function atualizaContador() 
-        {  
-        var hoje = new Date();  
-        var futuro = new Date(YY,MM-1,DD,HH,MI,SS);   
-        var ss = parseInt((futuro - hoje) / 1000);  
-        var mm = parseInt(ss / 60);  
-        var hh = parseInt(mm / 60);  
-        var dd = parseInt(hh / 24);   
-        ss = ss - (mm * 60);  
-        mm = mm - (hh * 60);  
-        hh = hh - (dd * 24);   
-        var faltam = '';  
-        faltam += (dd && dd > 1) ? dd+' dias, ' : (dd==1 ? '1 dia, ' : '');  
-        faltam += (toString(hh).length) ? hh+' hr, ' : '';  
-        faltam += (toString(mm).length) ? mm+' min e ' : '';  
-        faltam += ss+' seg';   
-        
-         if (dd+hh+mm+ss > 0) 
-         {
-          document.getElementById('contador').innerHTML = faltam;	
-          setTimeout(atualizaContador,1000);  
-         }
-         else
-         {
-          document.getElementById('contador').innerHTML = 'Sistema será reiniciado!!!!';	
-          setTimeout(atualizaContador,1000);  
-         }
-        }
-        </script>
-        
-        <body onLoad="atualizaContador()">
-        Informe a data:
+    <body onLoad="atualizaContador()">
+        <!--Informe a data:
         <input size="1" onChange="DD=this.value" style="text-align: center" /> /
         <input size="1" onChange="MM=this.value" style="text-align: center" /> /
         <input size="4" onChange="YY=this.value" style="text-align: center" /> às
         <input size="1" onChange="HH=this.value" style="text-align: center" /> :
         <input size="1" onChange="MI=this.value" style="text-align: center" /> :
         <input size="1" onChange="SS=this.value" style="text-align: center" /><br /><br>
-        Faltam <span id="contador"></span></body>
+        -->
+        <style type="text/css">
+            h1{
+            color:aliceblue;
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            footer{
+                color: aliceblue;
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;                              
+            }
+            h2{
+                color: darkslategrey;
+                font-size: 40px;
+                text-align: center;
+            }
+            h3{
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                font-size: 30px;
+
+            }
+            h4{
+                font-size: 20px;
+                color: darkslategrey;
+                text-align:center;
+
+            }
+            div{
+                font-family: 'Times New Roman', Times, serif;
+                color: rgb(180, 0, 0);
+                text-align: center;
+                font-size: 30px;
+            }
+        </style>
+        <h1>
+            <img src="http://www.rojemac.hospedagemdesites.ws/scriptcase/rojemac-ti.png">
+        </h1>
+
+        <h2>
+            Bom Dia, Senhores(as).           
+        </h2>
+        <div>
+            <p>A APLICAÇÃO SAP SERÁ REINICIADA SOMENTE NA BASE DA ROJEMAC .</p>
+            <strong><p>Hoje das 20:00hs às 20:20hs</p></strong>
+        </div>
+        <h3>
+            
+            <p>
+                <strong> Restam Apenas <span id="contador"></span></strong>
+            </p>
+            <p>
+                <img src="http://gen.sendtric.com/countdown/coel46cpzl"/>
+            </p> 
+            <p>
+                *Motivo: Manutenção nos Campos "LINHA" e "FABRICANTE" do Produto.
+            </p>                    
+        </h3>
+        <h4>
+                <p>Atenciosamente,</p>
+                <img src="http://www.rojemac.hospedagemdesites.ws/scriptcase/rojemac-ti-assinarura-grupo.png">
+        </h4>
+        <footer>
+                &copy; Equipe de TI Rojemac 2019
+        </footer>
+    </body>
+           
+</html>
