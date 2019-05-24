@@ -3,14 +3,33 @@
     <head>
         <meta charset="UTF-8">
             <Title>Trabalhando com a DOM</Title>
+            <style>
+                h1{
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-align: center;
+                    background-color: rgb(34, 51, 0);
+                    color: white;
+                }
+            </style>
         </head>
     <body>
-        <font face="Arial">
-            <h1>"Trabalhando com a DOM"</h1>
-        </font>
-
+        
+        <h1> Trabalhando com a DOM</h1>
+        <div id="app">
+            <input type="text" name="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        
         <script>
-            
+            //var inputElement = document.getElementsByTagName('input')[0]; // Econtra elementos também.
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function (){
+                var text = inputElement.value;
+                alert(text);
+            }
+            console.log(inputElement);
         </script>
     </body>   
 </html>
