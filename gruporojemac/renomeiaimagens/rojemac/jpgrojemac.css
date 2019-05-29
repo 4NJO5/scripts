@@ -3,6 +3,7 @@ h1{
     text-align: center;
     background-color: rgb(12, 1, 85);
     font-family: sans-serif;
+    border-radius: 20px;
 }
 
 h3{
