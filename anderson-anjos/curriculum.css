@@ -9,6 +9,10 @@ main h1 {
     text-transform: uppercase;
 }
 
+.dados-pessoais p{
+    text-align: center;
+}
+
 h2 {
     font-size: 30px;
     font-family: sans-serif;
@@ -64,6 +68,10 @@ blockquote{
     width: 250px;
     box-sizing: border-box;
     margin: 0px;
+}
+
+.experiencia-rojemac{
+    float: right;
 }
 
 .icones-sociais li{
