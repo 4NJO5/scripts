@@ -4,6 +4,9 @@ main h1 {
     color: white;
     text-align: center;
     font-family: sans-serif;
+    padding: 20px;
+    margin: 0px;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -17,12 +20,80 @@ body{
     background-color: rgb(240, 240, 240);
     }
 
-div1{
+aside{
+    background-color: darkslateblue;
+    color: white;
     text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 0px;
+    padding: 20px;
 }
 
-footer{
+aside nav h1{
+    text-align: center;
+    padding-left: 1.8em;
+}
+
+li{
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+div1{
+    text-align: center;
+    list-style-type:none;
+}
+
+blockquote{
+    background-color: rgb(190, 190, 190);
+    padding: 20px;
+    border: 10px #707070 solid;
+    width: 250px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.icones-sociais li{
+    display: inline-block;
+}
+/*
+.icones-sociais a{
+    
+    display: inline-block;
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(github.png);
+    background-size: cover;
+    background: no-repeat;
+}
+
+.facebook {
+    background-image: url(fabebook.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
+}
+*/
+footer{
+    padding: 0.1px;
+    /*font-weight: bold;*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(97, 126, 163)
 }
