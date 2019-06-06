@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="UTF-8">
+        <title>Calculadora Tabuada</title>
+    </head>
+    <body>
+        <main style="text-align: center">
+            <h1 style="font-family: Arial, Helvetica, sans-serif">Calculadora Tabuada</h1>
+            <input type="number" id="qtabuada" placeholder=" Digite o Multiplicador"><br><br>
+            <input type="number" id="ndefined" placeholder=" Digite um Limite"><br><br>
+            <button type="button" onclick="tabuada()">Calcular</button>
+            
+            <p id="resultado"></p>
+            
+            <script>
+                function tabuada(){
+                    let tabuada = Number(document.getElementById("qtabuada").value);
+                    let n = 0;
+                    let defined = Number(document.getElementById("ndefined").value);
+                    
+                    document.write(`<h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center";>Calculadora Tabuada</h1>`);
+                    const funcao = function(n,tabuada){
+                        console.log('dentro', n);
+                        document.write(`<p style="text-align: center; font-family: Arial;">No cálculo de <strong style="color:red">${tabuada}</strong> x <strong>${n}</strong> = <strong style="color:green">${tabuada*n}</strong><br>`);
+                        }                    
+                    for( tabuada; n <= defined; n++){
+                        const t = { 'num': n };
+                        const{num} = t;
+                        setTimeout(() => funcao(num,tabuada),100);
+                        console.log('fora', n);
+                    }
+                }
+                document.write(`<footer>&copy;Anderson dos Anjos 2019</footer>`);
+                </script>
+        </main>
+   </body>
+</html>
