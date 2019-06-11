@@ -7,28 +7,56 @@
     <body>
         <main>
             <h1 style="text-align: center">Variável for</h1>
-
         </main>
         <script>
-            function pulaLinha(){
-                var linha = 1;
-                var vezes = 0;
-                var limite = 1;
-                for(linha = 1; vezes <= limite; limite++)
-                document.write(`<br>`);
+            function percorreArray(textos){
+                const test = arrObjOutros.map(function(obj){
+                    return `teste ${obj}`
+                })
+                console.log(test);
+                // var linha = 1;
+                // const vezes = textos.length;
+                // var i = 0;
+
+                // for(linha; i < vezes; i++){
+                //     const func = textos[i];
+                //     document.write(`${func.nome} - ${func.registro}<br/><br/>`);
+                // }
+
+                textos.map((func)=>{document.write(`${func.nome} - ${func.registro} - ${func.obs}<br/><br/>`);})
             }
 
-            document.write(`TEXTO1`);
-            pulaLinha();     
-            document.write(`TEXTO2`);
-            pulaLinha();     
-            document.write(`TEXTO3`);
-            pulaLinha();
-            document.write(`TEXTO4`);
-            pulaLinha();    
+            const arrObj = [
+
+                {
+                    nome: 'Anderson',
+                    registro: 'ti02',
+                    obs: 'Filial'
+                },
+                {
+                    nome: 'Luis',
+                    registro: 'ti01',
+                    obs: 'Filial'
+                },
+                {
+                    nome: 'Gustavo',
+                    registro:'ti04',
+                    obs: 'Filial'
+                },
+                {
+                    nome: 'Leandro Borges',
+                    registro:'ti05',
+                    obs: 'Matriz'
+                }
+            ]
+
+            const arrObjOutros = ['1','2','3']
+            
+            percorreArray(arrObj);
+
+
         </script>
         <footer>
-
         </footer>
     </body>
 </html>
