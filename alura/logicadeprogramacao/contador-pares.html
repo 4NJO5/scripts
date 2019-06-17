@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Contador de Pares</title>
+        </head>
+        <body onload="start();">
+        
+        <progress id=carrega max="60"></progress><br><br>
+
+             <script>
+                function pulaLinha() {
+                    document.write(" | ");
+                }
+            
+                function mostra(frase) {
+                    document.write(frase);
+                    pulaLinha();
+                }
+
+               var progresso = new Number();
+               var maximo = new Number();
+               var progresso = 0;
+               var maximo = 61;
+
+               calculaParidade();
+
+               function start(){
+                   if((progresso + 1 ) < maximo){
+                       progresso = progresso + 1;
+                       document.getElementById("carrega").value=progresso;
+                       setTimeout("start();",100);
+                       console.log(progresso + " dentro do if");
+                   }
+                    console.log(progresso +" fora do if");
+               }
+               
+               function calculaParidade(){
+
+                   var contador = 0;
+                   var limite = parseInt(prompt("Até qual número você quer saber a Paridade?"));
+                   while( contador <= limite ){
+                       mostra(contador);
+                       contador = contador + 2;
+                       console.log(contador - 2);
+                    }
+                    
+                }
+            
+            </script>
+        </body>
+
+</html>

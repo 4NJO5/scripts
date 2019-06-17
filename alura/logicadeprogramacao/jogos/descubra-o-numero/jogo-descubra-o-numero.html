@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+        <meta charset="UTF-8">
+        <audio id="errou"></audio>
+
+        <script>
+                function pulaLinha() {
+                    document.write("<br>");
+                }
+            
+                function mostra(frase) {
+                    document.write(frase);
+                    pulaLinha();
+                }
+            
+                var numeroPensado = Math.round(Math.random()*100);
+                //console.log(numeroPensado);
+                var tentativas = 1;
+                var audioerrou = new Audio("faustao-errou.mp3");
+                var audioacertou = new Audio("esta-fera.mp3");           
+
+                while(tentativas <= 3){
+
+                    var chute = parseInt(prompt("Digite seu chute de 0 à 100. Tentativa " + tentativas +"/3."));
+    
+                    if(chute == numeroPensado){
+                        mostra("Você ACERTOU!!! O número pensado era " + numeroPensado);
+                        audioacertou.play();
+                        break;
+                    }else{
+                        audioerrou.play();
+                        mostra("Que Pena você digitou "+ chute +". Você ERROU!!! na Tentativa " + tentativas);
+                    }
+
+                    tentativas++;
+                }
+
+                mostra("GAME OVER");
+            
+            </script>
+</html>
