@@ -2,12 +2,19 @@ main{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    margin: 10px;
+    background-color: darkgrey;
 }
 
 h1{
     background: firebrick;
     border-radius: 10px;
     padding: 10px;
+}
+
+#chute{
+    width: 250px;
+    font-size: 18px;
 }
 
 footer{
