@@ -6,7 +6,7 @@ const subTitulo = document.querySelector('.sub-titulo');
 subTitulo.textContent = 'Anderson dos Anjos Silva';
 //console.log(subTitulo);
 
-    const pacientes = document.querySelectorAll('.paciente');
+    let pacientes = document.querySelectorAll('.paciente');
         
         for( let i = 0; i < pacientes.length; i++){
             

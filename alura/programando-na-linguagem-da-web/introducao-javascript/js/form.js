@@ -14,17 +14,19 @@ botaoAdicionar.addEventListener('click', function(event){
 
     //Valida dados antes de inserir
     let erros = validaPaciente(paciente);
-
+    console.log(erros);
     if(erros.length > 0){
         exibeMensagensDeErros(erros);
         return;
     }
 
     //Adiciona informacoes na tabela
-    const tabela = document.querySelector('#tabela-pacientes');
+    let tabela = document.querySelector('#tabela-pacientes');
     tabela.appendChild(pacienteTr);
 
     form.reset();
+    let mensagensErro = document.querySelector('#mensagens-erro');
+    mensagensErro.innerHTML = '';
     
 });
 
@@ -33,12 +35,14 @@ titulo.addEventListener('click', function(){
 }); //Função Anônima não precisa ser dado o nome para a função.. porém ela só poderá ser chamada dentro deste contexto
 
 function exibeMensagensDeErros(erros){
-    const ul = document.querySelector('#mensagens-erro');
-    erros.foreEach(function(erro){
-        const li = document.createElement('li');
+    let ul = document.querySelector('#mensagens-erro');
+    ul.innerHTML = '';
+    erros.forEach(function(erro){
+        let li = document.createElement('li');
         li.textContent = erro;
         ul.appendChild(li);
     });
+
 }
 
 function obtemPacienteDoFormulario(form){
@@ -67,6 +71,7 @@ function montaTr(paciente){
     pacienteTr.appendChild(montaTd(paciente.imc, 'info-imc'));
         
     return pacienteTr;
+
 
     // const nomeTd = montaTd(paciente.nome,'info-nome')
     // nomeTd.textContent = paciente.nome;
@@ -102,12 +107,28 @@ function validaPaciente(paciente){
 
     let erros = [];
 
+    if(paciente.nome.length == 0){
+        erros.push('*O nome não pode ser em branco');
+    }
+
+    if(paciente.peso.length == 0){
+        erros.push('*O Peso não pode ser em branco');
+    }
+    
+    if(paciente.altura.length == 0){
+        erros.push('*A Altura não pode ser em branco');
+    }
+    
+    if(paciente.gordura.length == 0){
+        erros.push('*A gordura do paciente não pode ser em branco');
+    }
+ 
     if(!validaPeso(paciente.peso)){
         erros.push('*O Peso é Inválido');
     }
 
     if(!validaAltura(paciente.altura)){
-        erros.push('*A altrura é Inválida');
+        erros.push('*A Altrura é Inválida');
     }
     return erros;
 }
