@@ -5,6 +5,7 @@
 		<title>Entendendo Javascipt</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
 	</head>
@@ -69,6 +70,10 @@
 						</tr>
 					</tbody>
 				</table>
+				<div id="btnExclusao">
+					<!--<button id="limpar-selecionados" class="btnTabela">Limpar Seleção</button>-->
+					<button id="excluir-paciente" class ="btnTabela btn btn-danger" disabled>Excluir</button>
+				</div>
 
 			</section>
 		</main>
@@ -93,12 +98,15 @@
 					<label for="gordura">% de Gordura:</label>
 					<input id="gordura" name="gordura" type="text" placeholder="Digite a porcentagem" class="campo campo-medio">
 				</div>
-				<button id="adicionar-paciente" class="botao bto-principal"> Adicionar</button>
+				<button id="adicionar-paciente" class="botao bto-principal btn btn-success"> Adicionar</button>
 			</form>
 		</section>
 		<!--Fim do Formulário-->
 	<script src="js/calcula-imc.js"></script>
 	<script src="js/form.js"></script>
 	<script src="js/remover-pacientes.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	</body>
 </html>

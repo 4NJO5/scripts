@@ -95,7 +95,8 @@ label{
 	padding: 10px 0px;
 }
 
-button{
+#adicionar-paciente{
+/*
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;
@@ -105,13 +106,31 @@ button{
 	margin-top: -3px;
 	color: #fff;
 	background-color:#0c8cd3;
-	border-color: #04324c;
-	width: 20%;
+	border-color: #04324c;*/
+	width: 20%;/*
     display: block;
     clear: both;
 	margin: 10px 0px;
 	border-radius: 5px;
+*/
+}
 
+.btnTabela{
+	/*padding: .5em 2em;
+	border: 0;
+	border-bottom: 3px solid;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -3px;
+	color: #fff;
+	background-color:#0c8cd3;
+	border-color: #04324c;
+	width: 20%;*/
+	display: inline-block;
+    /*clear: both;
+	margin: 10px 0px;
+	border-radius: 5px;*/
 }
 
 button:active{
@@ -142,4 +161,20 @@ button[disabled=disabled], button:disabled {
 	color: red;
 	font-weight: bold;
 	
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.selecionaLinha{
+	color: yellow;
+	background-color: red;
+
+}
+
+.cancelaSelecaoLinha{
+	color: black;
+	background-color: white;
 }
